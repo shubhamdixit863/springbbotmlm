@@ -13,7 +13,11 @@ public class UserService {
 	public UserRepository userRepository;
 	
 	public UserDomain getUserByUsername(String username)
-	{  User user= userRepository.findByUsername(username);
+	{  
+	try {
+		
+		User user= userRepository.findByUsername(username);
+		System.out.println(user);
 		UserDomain userDomain=new UserDomain();
 		userDomain.setUsername(user.getUsername());
 		userDomain.setPassword(user.getPassword());
@@ -23,6 +27,14 @@ public class UserService {
 		userDomain.setRoles(user.getRoles());
 		
 		return userDomain;
+	}
+	
+	catch(Exception e)
+	{
+		
+		System.out.println(e);
+		return null;
+	}
 	}
 	
 	public User saveUser(UserDomain user_)

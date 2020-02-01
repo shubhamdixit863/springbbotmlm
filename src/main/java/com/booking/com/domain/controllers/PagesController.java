@@ -23,7 +23,7 @@ public class PagesController {
 	public String homePageAdmin(Model model)
 	{
     	
-     return "admin/home";
+     return "admin/index";
 	}
     
     @RequestMapping(value="/admin/registeruser",method=RequestMethod.GET)

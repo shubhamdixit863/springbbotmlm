@@ -6,25 +6,19 @@
 [ FONT ]*/
 
 @font-face {
-  font-family: Poppins-Regular;
-  src: url('../fonts/poppins/Poppins-Regular.ttf'); 
+  font-family: Oswald-Regular;
+  src: url('../fonts/oswald/Oswald-Regular.ttf'); 
 }
 
 @font-face {
-  font-family: Poppins-Medium;
-  src: url('../fonts/poppins/Poppins-Medium.ttf'); 
+  font-family: Oswald-Medium;
+  src: url('../fonts/oswald/Oswald-Medium.ttf'); 
 }
 
 @font-face {
-  font-family: Poppins-Bold;
-  src: url('../fonts/poppins/Poppins-Bold.ttf'); 
+  font-family: Oswald-Bold;
+  src: url('../fonts/oswald/Oswald-Bold.ttf'); 
 }
-
-@font-face {
-  font-family: Poppins-SemiBold;
-  src: url('../fonts/poppins/Poppins-SemiBold.ttf'); 
-}
-
 
 
 
@@ -39,12 +33,12 @@
 
 body, html {
 	height: 100%;
-	font-family: Poppins-Regular, sans-serif;
+	font-family: Oswald-Regular, sans-serif;
 }
 
 /*---------------------------------------------*/
 a {
-	font-family: Poppins-Regular;
+	font-family: Oswald-Regular;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -61,7 +55,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #333333;
+  color: #111111;
 }
 
 /*---------------------------------------------*/
@@ -70,7 +64,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 p {
-	font-family: Poppins-Regular;
+	font-family: Oswald-Regular;
 	font-size: 14px;
 	line-height: 1.7;
 	color: #666666;
@@ -89,6 +83,17 @@ input {
 	border: none;
 }
 
+input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 textarea {
   outline: none;
   border: none;
@@ -98,25 +103,16 @@ textarea:focus, input:focus {
   border-color: transparent !important;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
 
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
-textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
+input::-webkit-input-placeholder { color: #43383e;}
+input:-moz-placeholder { color: #43383e;}
+input::-moz-placeholder { color: #43383e;}
+input:-ms-input-placeholder { color: #43383e;}
 
-input::-webkit-input-placeholder { color: #adadad;}
-input:-moz-placeholder { color: #adadad;}
-input::-moz-placeholder { color: #adadad;}
-input:-ms-input-placeholder { color: #adadad;}
-
-textarea::-webkit-input-placeholder { color: #adadad;}
-textarea:-moz-placeholder { color: #adadad;}
-textarea::-moz-placeholder { color: #adadad;}
-textarea:-ms-input-placeholder { color: #adadad;}
+textarea::-webkit-input-placeholder { color: #43383e;}
+textarea:-moz-placeholder { color: #43383e;}
+textarea::-moz-placeholder { color: #43383e;}
+textarea:-ms-input-placeholder { color: #43383e;}
 
 /*---------------------------------------------*/
 button {
@@ -133,21 +129,38 @@ iframe {
 	border: none !important;
 }
 
-
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 .txt1 {
-  font-family: Poppins-Regular;
-  font-size: 15px;
-  color: #999999;
-  line-height: 1.5;
+  font-family: Oswald-Bold;
+  font-size: 20px;
+  color: #333333;
+  line-height: 1.2;
 }
 
 .txt2 {
-  font-family: Poppins-Regular;
-  font-size: 15px;
-  color: #57b846;
-  line-height: 1.5;
+  font-family: Oswald-Regular;
+  font-size: 16px;
+  color: #999999;
+  line-height: 1.4;
+}
+
+.txt3 {
+  font-family: Oswald-Regular;
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.bg1 {background-color: #3b5998;}
+.bg2 {background-color: #1da1f2;}
+
+.bo1 {border-bottom: 1px solid #929292;}
+
+.hov1:hover {
+  border-bottom: 1px solid #111111;
+  color: #111111;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -170,42 +183,65 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #fff;  
+  position: relative;
+  background-color: #e6e6e6;
 }
 
 .wrap-login100 {
-  width: 390px;
-  background: #fff;
+  width: 320px;
+  background: transparent;
+  border-radius: 0px;
 }
 
 
-/*------------------------------------------------------------------
+/*==================================================================
 [ Form ]*/
 
 .login100-form {
   width: 100%;
+  position: relative;
 }
 
 .login100-form-title {
-  display: block;
-  font-family: Poppins-Bold;
-  font-size: 39px;
-  color: #333333;
+  font-family: Oswald-Medium;
+  font-size: 30px;
+  color: #43383e;
   line-height: 1.2;
   text-align: center;
-}
 
-.login100-form-avatar {
   display: block;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 0 auto;
 }
 
-.login100-form-avatar img {
+
+/*------------------------------------------------------------------
+[ Button Login with ]*/
+
+.btn-login-with {
+  font-family: Oswald-Medium;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.btn-login-with i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.btn-login-with:hover {
+  color: #fff;
+  background-color: #333333;
 }
 
 /*------------------------------------------------------------------
@@ -213,89 +249,89 @@ iframe {
 
 .wrap-input100 {
   width: 100%;
+  background-color: #fff;
+  border-radius: 31px;
   position: relative;
-  border-bottom: 2px solid #d9d9d9;
+  z-index: 1;
 }
 
 .input100 {
-  font-family: Poppins-SemiBold;
-  font-size: 18px;
-  color: #555555;
+  font-family: Oswald-Medium;
+  font-size: 16px;
+  color: #43383e;
   line-height: 1.2;
 
+  position: relative;
   display: block;
   width: 100%;
-  height: 52px;
-  background: transparent;
-  padding: 0 5px;
+  height: 62px;
+  background: #fff;
+  border-radius: 31px;
+  padding: 0 35px 0 35px;
 }
 
-/*---------------------------------------------*/ 
+
+/*------------------------------------------------------------------
+[ Focus Input ]*/
+
 .focus-input100 {
-  position: absolute;
   display: block;
+  position: absolute;
+  z-index: -1;
   width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 31px;
+  background-color: #fff;
   pointer-events: none;
-}
-
-.focus-input100::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-
-  background: #57b846;
-}
-
-.focus-input100::after {
-  font-family: Poppins-Medium;
-  font-size: 18px;
-  color: #999999;
-  line-height: 1.2;
-
-  content: attr(data-placeholder);
-  display: block;
-  width: 100%;
-  position: absolute;
-  top: 15px;
-  left: 0px;
-  padding-left: 5px;
-
+  
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.input100:focus + .focus-input100::after {
-  top: -20px;
+.input100:focus + .focus-input100 {
+  width: calc(100% + 20px);
+}
+
+/*---------------------------------------------*/
+.btn-show-pass {
   font-size: 15px;
+  color: #aaaaaa;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 200;
+  height: 100%;
+  top: 0;
+  right: 25px;
+  padding: 0 5px;
+  cursor: pointer;
+  -webkit-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  transition: background 0.4s;
 }
 
-.input100:focus + .focus-input100::before {
-  width: 100%;
+.btn-show-pass:hover {
+  color: #111111;
 }
 
-.has-val.input100 + .focus-input100::after {
-  top: -20px;
-  font-size: 15px;
+.btn-show-pass.active {
+  color: #111111;
 }
-
-.has-val.input100 + .focus-input100::before {
-  width: 100%;
-}
-
 
 /*------------------------------------------------------------------
 [ Button ]*/
@@ -311,12 +347,6 @@ iframe {
 }
 
 .login100-form-btn {
-  font-family: Poppins-Medium;
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.2;
-  text-transform: uppercase;
-
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -325,36 +355,60 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+  min-width: 160px;
+  height: 62px;
+  background-color: transparent;
+  border-radius: 31px;
+
+  font-family: Oswald-Regular;
+  font-size: 16px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+.login100-form-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
   width: 100%;
-  height: 50px;
-  background-color: #57b846;
-  border-radius: 25px;
-
-  box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -moz-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -o-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-  -ms-box-shadow: 0 10px 30px 0px rgba(87, 184, 70, 0.5);
-
+  height: 100%;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 31px;
+  background-color: #333333;
+  pointer-events: none;
+  
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
 }
 
-.login100-form-btn:hover  {
-  background-color: #333333;
-  box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -moz-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -webkit-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -o-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
-  -ms-box-shadow: 0 10px 30px 0px rgba(51, 51, 51, 0.5);
+.login100-form-btn:hover:before {
+  background-color: #222222;
+  width: calc(100% + 20px);
 }
-
 
 
 /*------------------------------------------------------------------
 [ Alert validate ]*/
+.alert-validate .btn-show-pass {
+  visibility: hidden;
+}
 
 .validate-input {
   position: relative;
@@ -363,10 +417,11 @@ iframe {
 .alert-validate::before {
   content: attr(data-validate);
   position: absolute;
+  z-index: 1000;
   max-width: 70%;
   background-color: #fff;
   border: 1px solid #c80000;
-  border-radius: 2px;
+  border-radius: 14px;
   padding: 4px 25px 4px 10px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -374,10 +429,10 @@ iframe {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 0px;
+  right: 10px;
   pointer-events: none;
 
-  font-family: Poppins-Regular;
+  font-family: Oswald-Regular;
   color: #c80000;
   font-size: 13px;
   line-height: 1.4;
@@ -395,19 +450,18 @@ iframe {
 .alert-validate::after {
   content: "\f06a";
   font-family: FontAwesome;
-  font-size: 16px;
-  color: #c80000;
-
   display: block;
   position: absolute;
-  background-color: #fff;
+  z-index: 1100;
+  color: #c80000;
+  font-size: 16px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: 5px;
+  right: 16px;
 }
 
 .alert-validate:hover:before {
@@ -422,27 +476,10 @@ iframe {
   }
 }
 
-
 /*//////////////////////////////////////////////////////////////////
-[ Login more ]*/
-.login-more li {
-  position: relative;
-  padding-left: 16px;
-}
-
-.login-more li::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #cccccc;
-  top: 45%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%);
-  left: 0;
+[ Responsive ]*/
+@media (max-width: 576px) {
+  .wrap-login100 {
+    padding-top: 20px
+  }
 }

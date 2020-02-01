@@ -35,6 +35,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
 		UserDomain user=userservice.getUserByUsername(username);
+	System.out.println("user--"+user);
 		 
 		    if(user != null && user.getIsEnabled()) {
 		        List<GrantedAuthority> authorities = getUserAuthority(user.getRoles());
