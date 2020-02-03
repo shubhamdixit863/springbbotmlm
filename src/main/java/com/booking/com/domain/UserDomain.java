@@ -13,6 +13,41 @@ public class UserDomain {
 	public String password;
 	public Date reg_date;
 	public Boolean isEnabled;
+	private String pan;
+	private String gst;
+	private long mobile;
+	private String address;
+	private String email;
+	public String getPan() {
+		return pan;
+	}
+	public void setPan(String pan) {
+		this.pan = pan;
+	}
+	public String getGst() {
+		return gst;
+	}
+	public void setGst(String gst) {
+		this.gst = gst;
+	}
+	public long getMobile() {
+		return mobile;
+	}
+	public void setMobile(long mobile) {
+		this.mobile = mobile;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public Set<Role> getRoles() {
 		return roles;
 	}

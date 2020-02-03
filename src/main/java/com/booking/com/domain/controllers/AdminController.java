@@ -27,7 +27,7 @@ public class AdminController {
 	@Autowired
 	private RoleService roleService;
 	@RequestMapping(value="/user",method=RequestMethod.POST)
-	public String registerUser(@RequestParam Optional<Boolean> isEnabled,@RequestParam Optional<String> username,@RequestParam Optional<String> password,@RequestParam Optional<String> name,@RequestParam Optional<String> role)
+	public String registerUser(@RequestParam Optional<String> pan,@RequestParam Optional<String> gst,@RequestParam Optional<Long> mobile,@RequestParam Optional<String> address,@RequestParam Optional<String> email, @RequestParam Optional<Boolean> isEnabled,@RequestParam Optional<String> username,@RequestParam Optional<String> password,@RequestParam Optional<String> name,@RequestParam Optional<String> role)
 	{
 		UserDomain user=new UserDomain();
 		user.setIsEnabled(isEnabled.orElseGet(()->true));

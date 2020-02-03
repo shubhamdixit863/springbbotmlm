@@ -22,6 +22,53 @@ public class User {
 	}
 	@Column(name="username" ,unique = true)
 	private String username;
+	
+	@Column(name="pan" ,unique = true)
+	private String pan;
+	
+	@Column(name="gst" ,unique = true)
+	private String gst;
+	
+	@Column(name="address" ,unique = true)
+	private String address;
+	
+	
+	@Column(name="mobile" ,unique = true)
+	private long mobile;
+	
+	
+	public String getPan() {
+		return pan;
+	}
+	public void setPan(String pan) {
+		this.pan = pan;
+	}
+	public String getGst() {
+		return gst;
+	}
+	public void setGst(String gst) {
+		this.gst = gst;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public long getMobile() {
+		return mobile;
+	}
+	public void setMobile(long mobile) {
+		this.mobile = mobile;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	@Column(name="email" ,unique = true)
+	private String email;
 	@Column(name="password")
 	private String password;
 	@Column(name="user_registration_date")

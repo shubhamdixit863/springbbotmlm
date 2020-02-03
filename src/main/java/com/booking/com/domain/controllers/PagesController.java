@@ -26,11 +26,11 @@ public class PagesController {
      return "admin/index";
 	}
     
-    @RequestMapping(value="/admin/registeruser",method=RequestMethod.GET)
+    @RequestMapping(value="/admin/accounts",method=RequestMethod.GET)
 	public String userRegistrationPageAdmin(Model model)
 	{
     	
-     return "admin/registeruser";
+     return "admin/accounts";
 	}
     
     
