@@ -19,20 +19,7 @@ public class PagesController {
      return "login";
 	}
     
-    @RequestMapping(value="/admin/home",method=RequestMethod.GET)
-	public String homePageAdmin(Model model)
-	{
-    	
-     return "admin/index";
-	}
-    
-    @RequestMapping(value="/admin/accounts",method=RequestMethod.GET)
-	public String userRegistrationPageAdmin(Model model)
-	{
-    	
-     return "admin/accounts";
-	}
-    
+  
     
     
     
