@@ -483,13 +483,3 @@ iframe {
     padding-top: 20px
   }
 }
-
-
-
-
-a.btn.red.btn-xs {
-    padding: 0 2px;
-    background-color: #cb5a5e;
-    color: #fff;
-    font-size: 11px;
-}
