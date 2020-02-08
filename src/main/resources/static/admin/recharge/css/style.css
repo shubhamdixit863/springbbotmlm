@@ -18,7 +18,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 html,body{
 	background:#fff;
 	font-size: 100%;
-	font-family: 'Oxygen-Regular';
+	 font-family: 'Oxygen';
 }
 body a{
 	transition: 0.5s all;
@@ -1963,6 +1963,7 @@ input#submit {
     font-size: 12px;
     margin: 8px 0;
     letter-spacing: 0.5px;
+     font-family: 'Oxygen';
 }
 .btn-default {
     border-color: #e4e4e4;
@@ -1982,7 +1983,7 @@ ul.tabs-menu li a {
     color: #28ece3;
     font-size: 20px;
     letter-spacing: 1px;
-    font-family: 'Oxygen-Regular';
+    font-family: 'Oxygen';
 }
 label.radio, .checkbox {
     font-size: 14px;
@@ -1995,7 +1996,7 @@ label.radio, .checkbox {
     color: #28ece3;
     font-size: 20px;
     letter-spacing: 1px;
-    font-family: 'Oxygen-Regular';
+     font-family: 'Oxygen';
     cursor: pointer;
 }
 .radio i, .checkbox i {
@@ -2294,7 +2295,7 @@ ul.career-start li a i {
 
 
 .categories-section.main-grid-border {
-    padding: 80px 0;
+    padding: 0px 0;
 }
 
 .w3layouts-content {

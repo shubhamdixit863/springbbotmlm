@@ -9,16 +9,23 @@ ul.resp-tabs-list, p {
     letter-spacing: 2px;
     display: inline-block;
     padding: 13px 15px;
-    margin: 0 4px 0 0;
+    margin: 0 4px 6px 0;
+    width: 100%;
+    border: 1px solid #000;
     list-style: none;
     cursor: pointer;
     float: left;
 }
 
+.resp-tabs-list li i.icon.fa {
+    padding: 0 31px 0 0;
+    width: 10px;
+}
+
 .resp-tabs-container {
-    padding: 0px;
-    background-color: #fff;
-    clear: left;
+    padding: 0 35px;
+    width: 70%;
+    float: left;
 }
 
 h2.resp-accordion {
@@ -102,8 +109,10 @@ h2.resp-tab-title:last-child {
 .agileits-tab_nav {
     float: left;
     width: 30%;
-	margin-top: 0!important;
-	min-height: 650px;
+    margin-top: 0!important;
+    min-height: 650px;
+    background-color: #fff;
+    padding: 20px;
 }
 ul.resp-tabs-list.hor_1 {
     margin-top: 0!important;
