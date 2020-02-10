@@ -1634,18 +1634,20 @@ h3.other-nw {
 }
 /**** LOGIN_SIGNUP ******/
 /* signup Form styles */
-#signup ol{
+#signup11 ol,#signup2 ol,.login-form ol{
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
 }
-#signup li{
+#signup11 li,#signup2 li, .login-form ol li{
 	position: relative;
     margin: 20px 0px;
 }
-#signup fieldset input,
-#signup fieldset textarea,
-#signup fieldset select{
+#signup11 fieldset input,
+#signup11 fieldset textarea,
+#signup11 fieldset select,#signup2 fieldset input,
+#signup2 fieldset textarea,
+#signup2 fieldset select{
 	background: #fff url(ico_validation.png) 379px 24px no-repeat;
 	display: inline-block;
 	width: 371px;
@@ -1659,19 +1661,20 @@ h3.other-nw {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
-#signup fieldset select{ 
+#signup11 fieldset select,#signup2 fieldset select{ 
 	width: 401px; 
 	padding: 3px;
 }
-#signup fieldset #postcode{ 
+#signup11 fieldset #postcode{ 
 	padding: 3px;
 	width: 400px;
 }
-#signup input::-webkit-input-placeholder,
-#signup input:-moz-placeholder {
+#signup11 input::-webkit-input-placeholder,
+#signup11 input:-moz-placeholder,#signup2 input::-webkit-input-placeholder,
+#signup2 input:-moz-placeholder {
 	color: #A6A6A6;
 }
-#signup .validation01
+p.validation01
 { 
 	background: red;
 	color: #fff;
@@ -1692,53 +1695,53 @@ h3.other-nw {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
-#signup input:focus + .validation01 { 
+#signup11 input:focus + .validation01 { 
 	display: block; 
 }
-#signup input:focus:required:invalid + .validation01 .valid,
-#signup input.error:focus + .validation01 .valid,
-#signup input.required:focus + .validation01 .valid,
-#signup input:focus + .validation01 .valid	{
+#signup11 input:focus:required:invalid + .validation01 .valid,
+#signup11 input.error:focus + .validation01 .valid,
+#signup11 input.required:focus + .validation01 .valid,
+#signup11 input:focus + .validation01 .valid	{
 	display: none; 
 }
-#signup input:focus:required:valid + .validation01,
-#signup input.valid:focus + .validation01{ 
+#signup11 input:focus:required:valid + .validation01,
+#signup11 input.valid:focus + .validation01{ 
 	background: green; 
 }
-#signup input:focus:required:valid + .validation01 .invalid,
-#signup input.valid:focus + .validation01 .invalid	{ 
+#signup11 input:focus:required:valid + .validation01 .invalid,
+#signup11 input.valid:focus + .validation01 .invalid	{ 
 	display: none; 
 }
-#signup input:focus:required:valid + .validation01 .valid,
-#signup input.valid:focus + .validation01 .valid{
+#signup11 input:focus:required:valid + .validation01 .valid,
+#signup11 input.valid:focus + .validation01 .valid{
 	display: block; 
 }
-#signup fieldset input:required:valid{ 
+#signup11 fieldset input:required:valid{ 
 	background-color: #fff;
 	background-position: 379px -61px;
 }
 
 /* Enhanced error styling */
-#signup input.error{
+#signup11 input.error{
 	background-color: pink; 
 	background-position: 379px 3px;
 	outline: none; 
 }
-#signup input.required{
+#signup11 input.required{
 	background-color: #fff; 
 	background-position: 379px -29px;
 }
-#signup input.valid { 
+#signup11 input.valid { 
 	background-color: #fff;
 	background-position: 379px -61px;
 }
 
-#signup input.error::-webkit-input-placeholder,
-#signup inputerror :-moz-placeholder {
+#signup11 input.error::-webkit-input-placeholder,
+#signup11 inputerror :-moz-placeholder {
 	color: #fff;
 }
 
-input#tel {
+input#tel1{
     width: 85%;
     padding: 10px;
     font-weight: normal;
@@ -1957,6 +1960,7 @@ input#submit {
     width: 34%;
     text-decoration: none;
     padding-bottom: 3px;
+    font-size: 12px;
 }
 .login-form h4 {
     color: #30090a;
@@ -1964,6 +1968,8 @@ input#submit {
     margin: 8px 0;
     letter-spacing: 0.5px;
      font-family: 'Oxygen';
+     float:left;
+     width:100%;
 }
 .btn-default {
     border-color: #e4e4e4;
@@ -2046,7 +2052,7 @@ label.radio, .checkbox {
 .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark {
     margin-top: 14px;
 }
-input#customer {
+input#customer,input#customer1,.login-form form input {
     width: 85%;
     padding: 10px;
     font-weight: normal;
@@ -3582,13 +3588,17 @@ button.submit {
     letter-spacing: 1px;
     cursor: pointer;
 }
-input.submit {
+.login-form input.submit {
     background: #28ece3;
     border: none;
     color: #fff;
     padding: 9px 20px;
     letter-spacing: 1px;
     cursor: pointer;
+    width: auto;
+}
+button.btn.dropdown-toggle.btn-default::after {
+    display:  none;
 }
 /*-- /Support page --*/
 
@@ -4281,7 +4291,10 @@ abbr[title], abbr[data-original-title] {
 	filter: alpha(opacity=0);
 }
 /*-- //to-top --*/
-
+form#signup11 ol {
+    padding: 0;
+    list-style: none;
+}
 
 
 /*--responsive--*/

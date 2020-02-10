@@ -52,5 +52,7 @@ td.sorting_1 a {
     font-size: 10px;
     padding: 2px 1px;
 }
-
+.app-sidebar .scrollbar-sidebar {
+    overflow-x: scroll;
+}
 
