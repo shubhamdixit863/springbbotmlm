@@ -60,6 +60,14 @@ public class AdminController {
 			}
 		    
 	    
+	    @RequestMapping(value="/maketransaction",method=RequestMethod.GET)
+		public String makeTransactionPageAdmin(Model model)
+		{
+	    	
+	     return "admin/maketransaction";
+		}
+	    
+	    
 	  
 	  /**
 	   * POST CONTROLLERS  
