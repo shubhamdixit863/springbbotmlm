@@ -55,4 +55,7 @@ td.sorting_1 a {
 .app-sidebar .scrollbar-sidebar {
     overflow-x: scroll;
 }
+html {
+    font-size: inherit !important;
+}
 
